@@ -8,8 +8,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../component/bottom_button.dart';
 import '../constant.dart';
 import '../component/icon_content.dart';
+import '../enum.dart';
 
-enum Gender { MALE, FEMALE }
+
 
 class InputPage extends StatefulWidget {
   @override
@@ -38,10 +39,10 @@ class _InputPageState extends State<InputPage> {
                   child: ReusableCard(
                     onTap: () {
                       setState(() {
-                        selectedGender = Gender.MALE;
+                        selectedGender = Gender.male;
                       });
                     },
-                    color: selectedGender == Gender.MALE
+                    color: selectedGender == Gender.male
                         ? kActiveCardColor
                         : kInactiveCardColor,
                     cardChild: IconContent(
@@ -54,10 +55,10 @@ class _InputPageState extends State<InputPage> {
                   child: ReusableCard(
                     onTap: () {
                       setState(() {
-                        selectedGender = Gender.FEMALE;
+                        selectedGender = Gender.female;
                       });
                     },
-                    color: selectedGender == Gender.FEMALE
+                    color: selectedGender == Gender.female
                         ? kActiveCardColor
                         : kInactiveCardColor,
                     cardChild: IconContent(
